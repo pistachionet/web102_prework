@@ -8,11 +8,13 @@
 import GAMES_DATA from './games.js';
 
 // create a list of objects to store the data about the games using JSON.parse
-const GAMES_JSON = JSON.parse(GAMES_DATA)
+
+const GAMES_JSON = JSON.parse(GAMES_DATA) // after passing in the GAMES_DATA json text from the ./games.js file. We then take the values that were passed in and we parse the values to be able to read the values. After parsing the data we are able to extrapolate what we found into valeus that are iterable.
+
 
 // remove all child elements from a parent element in the DOM
 function deleteChildElements(parent) {
-    while (parent.firstChild) {
+    while (parent.firstChild) { // while the object being passed in has a firstChild then we want to iterate through and keep removing the first child untill we dont have any firstChild nodes in the objects (parent) that is being passed in
         parent.removeChild(parent.firstChild);
     }
 }
@@ -29,6 +31,12 @@ const gamesContainer = document.getElementById("games-container");
 function addGamesToPage(games) {
 
     // loop over each item in the data
+    for (let index = 0; index < games.length; index++) {
+        const element = array[index];
+
+           
+    
+
 
 
         // create a new div element, which will become the game card
@@ -44,6 +52,7 @@ function addGamesToPage(games) {
 
 
         // append the game to the games-container
+    }
 
 }
 
